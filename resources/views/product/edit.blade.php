@@ -67,6 +67,42 @@
         </div>
 
         <div class="form-group">
+          <div class="input-group">
+            <div class="custom-file">
+              <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+              <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text">Загрузка</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="custom-file">
+              <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+              <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text">Загрузка</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <div class="custom-file">
+              <input name="product_images[]" type="file" class="custom-file-input" id="exampleInputFile">
+              <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text">Загрузка</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
             <label>Выберите категорию</label>
           <select name="category_id" class="form-control select2" style="width: 100%;">
               @foreach($categories as $category)
@@ -79,6 +115,23 @@
                   @endif                                 
             @endisset
                 >{{ $category->title}}</option>
+            @endforeach
+          </select>
+        </div>
+
+        <div class="form-group">
+            <label>Выберите группу</label>
+          <select name="group_id" class="form-control select2" style="width: 100%;">
+              @foreach($groups as $group)
+                   
+            <option value="{{ $group->id }}"
+            @isset ($product->group_id)
+               
+                @if($group->id == $product->group_id)
+                    selected=''
+                  @endif                                 
+            @endisset
+                >{{ $group->title}}</option>
             @endforeach
           </select>
         </div>

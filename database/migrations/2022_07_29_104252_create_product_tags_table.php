@@ -18,7 +18,7 @@ return new class extends Migration
 
 
             $table->foreignId('tag_id')->nullable()->index()->constrained('tags');
-            $table->foreignId('product_id')->nullable()->index()->constrained('products')->onDelete('cascade');
+            $table->foreignId('product_id')->nullable()->index()->constrained('products');
 
             $table->timestamps();
         });

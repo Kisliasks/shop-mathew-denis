@@ -86,3 +86,12 @@ Route::group(['prefix' => 'groups'], function() {
     Route::delete('/{group}', \App\Http\Controllers\Group\DeleteController::class)->name('group.delete');
 }); 
 
+Route::group(['prefix' => 'front'], function() {
+
+    Route::get('/', \App\Http\Controllers\Client\IndexController::class)->name('front.index.index');
+
+
+
+
+});
+
